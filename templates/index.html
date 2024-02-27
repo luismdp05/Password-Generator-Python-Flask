@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de Contraseñas</h1>
+    <form action="/generate_password" method="post">
+      <label for="length">Longitud deseada:</label>
+      <input type="number" id="length" name="length" required>
+      <button type="submit">Generar Contraseña</button>
+    </form>
+
+    {% if error %}
+    <div class="error-container">
+      {{ error }}
+    </div>
+    {% endif %}
+
+    {% if password %}
+    <div class="result-container">
+      <h2>Contraseña Generada</h2>
+      <p class="password">{{ password }}</p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
