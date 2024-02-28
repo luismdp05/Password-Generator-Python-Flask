@@ -24,7 +24,7 @@ form{
 h1 {
     text-align: center;
     font-size: 24px;
-    color: #333;
+    color: #0f0f0f;
     margin-bottom: 20px;
 }
 
@@ -72,6 +72,7 @@ h2 {
 
 }
 
+
 .result-container {
     background-color: #e65b5b;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
@@ -87,4 +88,29 @@ h2 {
     font-size: 20px;
     font-weight: bold;
     color: #050505;
+}
+.copy_pass{
+    
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+        padding: 8px 16px;
+        margin: 10px 200px 0 200px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+      
+}
+.copy_pass button {
+    background-color: #cc1b32;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+}
+.copy_pass button:hover {
+    background-color: #962231;
 }

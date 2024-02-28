@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import random
 import string
+import pyperclip
 
 app = Flask(__name__)
 
@@ -22,6 +23,9 @@ def generate_password():
     return render_template('index.html', error=error_message)
 
   password = ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=length))
+ 
+  # Copiar la contraseña al portapapeles
+  pyperclip.copy(password)
 
   return render_template('index.html', password=password)
 
